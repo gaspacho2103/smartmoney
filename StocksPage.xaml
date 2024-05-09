@@ -1,0 +1,72 @@
+﻿<Page x:Class="SmartMoney.StocksPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:local="clr-namespace:SmartMoney"
+      mc:Ignorable="d" 
+            d:DesignHeight="1100" d:DesignWidth="850"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="MainPage">
+    <Grid Style="{DynamicResource MainPageGrid}">
+        <ScrollViewer Style="{DynamicResource scrollBar}" VerticalScrollBarVisibility="Hidden">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="35" Margin="0 45 0 0" FontWeight="Bold" Foreground="#d11144" Grid.Column="0" Grid.Row="0">График</TextBlock>
+                <lvc:CartesianChart Margin="0 30 0 0" x:Name="Graf" Background="Transparent" Width="450" Height="150" HorizontalAlignment="Left">
+                    <lvc:CartesianChart.Series>
+                        <lvc:LineSeries Values="{Binding Values}" x:Name="BuildingGraf" 
+                         StrokeThickness="3" 
+                         Stroke="#d11144" 
+                         Fill="Transparent" 
+                         LineSmoothness="0.5"
+                         PointForeground="#d11144"
+                         PointGeometrySize="9.5" />
+                        
+                    </lvc:CartesianChart.Series>
+                </lvc:CartesianChart>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="35" Margin="0 35 0 0" FontWeight="Bold" Foreground="#d11144">Популярные предложения</TextBlock>
+                <Border Background="#d11144" Width="470" Height="auto" MaxHeight="700" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,45,0,75" CornerRadius="30">
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Left" FontSize="28" FontWeight="Bold" Foreground="#fff" Margin="40 10 0 0">Акции компаний</TextBlock>
+                        <Border Style="{DynamicResource TopStocksBorderMainPage}" Width="470" MaxHeight="700" Height="auto" Margin="0 10 0 0" VerticalAlignment="Bottom" CornerRadius="25" BorderBrush="#d11144" BorderThickness="3.5" Padding="0 20 0 20">
+                            <StackPanel>
+                                <Grid Margin="35 0 0 0">
+                                    <Button x:Name="StockAction1" Style="{DynamicResource TopStocksButtonMainPage}" FontSize="21" FontWeight="Bold" Content="МТС.Телефония" BorderThickness="0" HorizontalAlignment="Left" Click="StockAction1_Click"></Button>
+                                    <Button x:Name="B1" Click="B1_Click" Content="+" Style="{DynamicResource BuyButton}" BorderBrush="#d11144" BorderThickness="0.5" FontSize="22" FontWeight="Bold" Width="50" Height="32" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 7 15 3"></Button>
+                                </Grid>
+                                <Grid Margin="35 15 0 0">
+                                    <Button x:Name="StockAction2" Style="{DynamicResource TopStocksButtonMainPage}" FontSize="21" FontWeight="Bold" Content="Газпром Нефть" BorderThickness="0" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Click="StockAction2_Click"></Button>
+                                    <Button x:Name="B2" Click="B2_Click" Content="+" Style="{DynamicResource BuyButton}" BorderBrush="#d11144" BorderThickness="0.5" FontSize="22" FontWeight="Bold" Width="50" Height="32" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 7 15 3"></Button>
+                                </Grid>
+                                <Grid Margin="35 15 0 0">
+                                    <Button x:Name="StockAction3" Style="{DynamicResource TopStocksButtonMainPage}" FontSize="21" FontWeight="Bold" Content="VK Музыка" BorderThickness="0" HorizontalAlignment="Left" Click="StockAction3_Click"></Button>
+                                    <Button x:Name="B3" Click="B3_Click" Content="+" Style="{DynamicResource BuyButton}" BorderBrush="#d11144" BorderThickness="0.5" FontSize="22" FontWeight="Bold" Width="50" Height="32" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 7 15 3"></Button>
+                                </Grid>
+                                <Grid Margin="35 15 0 0">
+                                    <Button x:Name="StockAction4" Style="{DynamicResource TopStocksButtonMainPage}" FontSize="21" FontWeight="Bold" Content="Сбербанк.Транзакции" BorderThickness="0" HorizontalAlignment="Left" Click="StockAction4_Click"></Button>
+                                    <Button x:Name="B4" Click="B4_Click" Content="+" Style="{DynamicResource BuyButton}" BorderBrush="#d11144" BorderThickness="0.5" FontSize="22" FontWeight="Bold" Width="50" Height="32" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 7 15 3"></Button>
+                                </Grid>
+                                <Grid Margin="35 15 0 0">
+                                    <Button x:Name="StockAction5" Style="{DynamicResource TopStocksButtonMainPage}" FontSize="21" FontWeight="Bold" Content="Билайн Интернет" BorderThickness="0" HorizontalAlignment="Left" Click="StockAction5_Click"></Button>
+                                    <Button x:Name="B5" Click="B5_Click" Content="+" Style="{DynamicResource BuyButton}" BorderBrush="#d11144" BorderThickness="0.5" FontSize="22" FontWeight="Bold" Width="50" Height="32" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 7 15 3"></Button>
+                                </Grid>
+                                <Grid Margin="35 15 0 0">
+                                    <Button x:Name="StockAction6" Style="{DynamicResource TopStocksButtonMainPage}" FontSize="21" FontWeight="Bold" Content="Билайн Интернет" BorderThickness="0" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Click="StockAction6_Click"></Button>
+                                    <Button x:Name="B6" Click="B6_Click" Content="+" Style="{DynamicResource BuyButton}" BorderBrush="#d11144" BorderThickness="0.5" FontSize="22" FontWeight="Bold" Width="50" Height="32" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 7 15 3"></Button>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+                <TextBlock Style="{DynamicResource ProfileInformationText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="35" Margin="0 -35 0 0" FontWeight="Bold" Foreground="#d11144">Какие акции лучше покупать?</TextBlock>
+                <TextBlock Style="{DynamicResource ProfileInformationText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" Margin="0 25 0 0" FontWeight="SemiBold">5 советов, как выбрать акции начинающему</TextBlock>
+                <TextBlock Style="{DynamicResource ProfileInformationText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="0 7 0 0">1. Выбирайте дивидендный или спекулятивный доход</TextBlock>
+                <TextBlock Style="{DynamicResource ProfileInformationText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="0 7 0 0">2. Определите подходящий вид акций</TextBlock>
+                <TextBlock Style="{DynamicResource ProfileInformationText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="0 7 0 0">3. Узнайте особенности бизнеса эмитента</TextBlock>
+                <TextBlock Style="{DynamicResource ProfileInformationText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="0 7 0 0">4. Диверсифицируйте инвестиционный портфель</TextBlock>
+                <TextBlock Style="{DynamicResource ProfileInformationText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="0 7 0 55">5. Следите за новостями</TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

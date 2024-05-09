@@ -1,0 +1,30 @@
+﻿<Window x:Class="SmartMoney.ReplenishWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:SmartMoney"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowState="Normal"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        Title="ReplenishWindow" Height="450" Width="425">
+    <materialDesign:Card UniformCornerRadius="20" MouseDown="Drag">
+        <Grid Style="{DynamicResource MainPageGrid}">
+            <Button x:Name="xMarkButton" Style="{DynamicResource xMarkButtonStyle}" Width="45" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Content="X" FontWeight="Bold" FontSize="18" BorderThickness="1.75" Click="Button_Xmark_Click" Grid.Column="1"></Button>
+            <Button x:Name="collapseMarkButton" Style="{DynamicResource collapseMarkButtonStyle}" Width="45" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Content="—" FontWeight="Bold" FontSize="16" BorderThickness="1.75" Click="Button_Collapse_Click"  Grid.Column="1" Margin="0 0 50 0"></Button>
+
+            <StackPanel Margin="20 80 20 0">
+                <TextBlock FontSize="25" Foreground="#d11144" FontWeight="Bold" Margin="10 0 0 0">Пополнение баланса</TextBlock>
+                <TextBox x:Name="TelephoneTextBox" materialDesign:HintAssist.Hint="Введите номер телефона" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0 40 0 0" Foreground="#d11144" BorderBrush="#d11144" CaretBrush="#d11144" SelectionBrush="#222028" BorderThickness="2" Width="365" Height="45" Padding="10 8 8 4" FontSize="18"></TextBox>
+                <TextBox x:Name="MoneyTextBox" materialDesign:HintAssist.Hint="Введите сумму пополнения" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0 40 0 0" Foreground="#d11144" BorderBrush="#d11144" CaretBrush="#d11144" SelectionBrush="#222028" BorderThickness="2" Width="365" Height="45" Padding="10 8 8 4" FontSize="18"></TextBox>
+
+                <Button x:Name="ReplenishButton" Style="{DynamicResource SenderButtonStyle}" Margin="0 52 0 0" Width="365" Height="38" FontWeight="SemiBold" FontSize="18" Content="Пополнить" Click="ReplenishButton_Click"></Button>
+            </StackPanel>
+        </Grid>
+    </materialDesign:Card>
+</Window>

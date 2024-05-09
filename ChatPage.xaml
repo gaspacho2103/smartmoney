@@ -1,0 +1,32 @@
+﻿<Page x:Class="SmartMoney.ChatPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SmartMoney"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="850"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="ChatPage">
+
+    <Grid Style="{DynamicResource ChatPageGrid}">
+        <StackPanel Margin="0 40 0 0">
+            <TextBlock Foreground="#d11144" FontSize="35" FontWeight="Bold">Наши контакты</TextBlock>
+            <TextBlock Style="{DynamicResource InfoContactPageText}" FontSize="27" Margin="0 50 0 0" FontWeight="SemiBold">Электронная почта:</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="0 25 0 0">
+                <TextBlock Foreground="#d11144" FontSize="29" FontWeight="Bold">smartmoney@gmail.com</TextBlock>
+                <materialDesign:PackIcon Kind="Email" Width="45" Height="45" Margin="25 0 0 0" Foreground="#d11144"></materialDesign:PackIcon>
+            </StackPanel>
+            <TextBlock Style="{DynamicResource InfoContactPageText}" FontSize="27" Margin="0 35 0 0" FontWeight="SemiBold">Телефон:</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="0 25 0 0">
+                <TextBlock Foreground="#d11144" FontSize="29" FontWeight="Bold">+7 (800) 943-27-29</TextBlock>
+                <materialDesign:PackIcon Kind="Telephone" Width="45" Height="45" Margin="25 0 0 0" Foreground="#d11144"></materialDesign:PackIcon>
+            </StackPanel>
+            <TextBlock Style="{DynamicResource InfoContactPageText}" FontSize="27" Margin="0 35 0 0" FontWeight="SemiBold">Наш сайт:</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="0 25 0 0">
+                <TextBlock Foreground="#d11144" FontSize="29" FontWeight="Bold">www.smartmoney.com</TextBlock>
+                <materialDesign:PackIcon Kind="Web" Width="45" Height="45" Margin="25 0 0 0" Foreground="#d11144"></materialDesign:PackIcon>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

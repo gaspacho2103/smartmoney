@@ -1,0 +1,55 @@
+﻿<Window x:Class="SmartMoney.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:SmartMoney"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowState="Normal"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        Style="{DynamicResource WindowStyle}"
+        Title="MainWindow" Height="650" Width="950">
+    <materialDesign:Card UniformCornerRadius="20" MouseDown="Drag">
+        <Grid Style="{DynamicResource GridStyle}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="850"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        <Button x:Name="xMarkButton" Style="{DynamicResource xMarkButtonStyle}" Grid.Column="1" Width="45" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Content="X" FontWeight="Bold" FontSize="18" BorderThickness="1.75" Click="Button_Xmark_Click"></Button>
+
+        <Button x:Name="collapseMarkButton" Style="{DynamicResource collapseMarkButtonStyle}" Grid.Column="1" Width="45" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Content="—" FontWeight="Bold" FontSize="16" BorderThickness="1.75" Click="Button_Collapse_Click" Margin="0 0 50 0"></Button>
+        <Border Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Style="{DynamicResource BorderStyle}">
+                <StackPanel>
+                    <Grid Style="{DynamicResource BorderGridStyle}">
+                        <Image Height="90" Width="90" Source="/BorderLogo.png" HorizontalAlignment="Center" Margin="0 20 0 0"/>
+                    </Grid>
+                    <Button x:Name="Main"  Click="Button_MainPage" HorizontalAlignment="Center" Margin="0 30 0 0" Style="{DynamicResource MaterialDesignFlatSecondaryLightBgButton}">
+                        <materialDesign:PackIcon Kind="Menu" Width="42" Height="38"></materialDesign:PackIcon>
+                    </Button>
+                    <Button x:Name="Profile" Click="Button_Profile" HorizontalAlignment="Center" Margin="0 35 0 0" Style="{DynamicResource MaterialDesignFlatSecondaryLightBgButton}">
+                        <materialDesign:PackIcon Kind="Account" Width="42" Height="38"></materialDesign:PackIcon>
+                    </Button>
+                    <Button x:Name="Stocks" Click="Button_Stocks" HorizontalAlignment="Center" Margin="0 35 0 0" Style="{DynamicResource MaterialDesignFlatSecondaryLightBgButton}">
+                        <materialDesign:PackIcon Kind="StairsUp" Width="42" Height="38"></materialDesign:PackIcon>
+                    </Button>
+                    <Button x:Name="Chat" Click="Button_Chat" HorizontalAlignment="Center" Margin="0 35 0 0" Style="{DynamicResource MaterialDesignFlatSecondaryLightBgButton}">
+                        <materialDesign:PackIcon Kind="About" Width="45" Height="40"></materialDesign:PackIcon>
+                    </Button>
+                    <Button x:Name="Exit" Click="Button_Exit" HorizontalAlignment="Center" Margin="0 35 0 0" Style="{DynamicResource MaterialDesignFlatSecondaryLightBgButton}">
+                        <materialDesign:PackIcon Kind="ExitRun" Width="42" Height="38"></materialDesign:PackIcon>
+                    </Button>
+                    <ToggleButton x:Name="ThemeButton" Click="Theme_Button_Click" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 50 0 0" Width="42" Height="38" Foreground="#222028" BorderBrush="#222028" Background="#222028"></ToggleButton>
+                        <Button x:Name="Admin" Click="Button_Admin" HorizontalAlignment="Center" Margin="0 15 0 0" Style="{DynamicResource MaterialDesignFlatSecondaryLightBgButton}" Visibility="Hidden">
+                            <materialDesign:PackIcon Kind="Administrator" Width="42" Height="38"></materialDesign:PackIcon>
+                        </Button>
+                </StackPanel>
+        </Border>
+        <Frame Style="{DynamicResource FrameStyle}" Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="0" Name="MainFrame" HorizontalAlignment="Center" NavigationUIVisibility="Hidden"></Frame>
+        </Grid>
+    </materialDesign:Card>
+</Window>
